@@ -21,3 +21,5 @@ C:\Users\nikit\source\repos\WpfAppName\WpfAppName\obj\Debug\netcoreapp3.1\WpfApp
 C:\Users\nikit\source\repos\WpfAppName\WpfAppName\obj\Debug\netcoreapp3.1\WpfAppName.dll
 C:\Users\nikit\source\repos\WpfAppName\WpfAppName\obj\Debug\netcoreapp3.1\WpfAppName.pdb
 C:\Users\nikit\source\repos\WpfAppName\WpfAppName\obj\Debug\netcoreapp3.1\WpfAppName.genruntimeconfig.cache
+C:\Users\nikit\source\repos\WpfAppName\WpfAppName\obj\Debug\netcoreapp3.1\View\WindowNewRole.g.cs
+C:\Users\nikit\source\repos\WpfAppName\WpfAppName\obj\Debug\netcoreapp3.1\View\WindowNewRole.baml

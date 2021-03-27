@@ -36,5 +36,7 @@ namespace WpfAppName
             WindowRole wRole = new WindowRole();
             wRole.Show();
         }
+        public static int IdRole { get; set; }
+
     }
 }
