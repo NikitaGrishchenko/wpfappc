@@ -1,16 +1,27 @@
-﻿using System.Windows;
-using WpfAppName.ViewModel;
-using WpfAppName.Model;
-using System.Collections.ObjectModel;
+﻿using loboratornay.Model;
+using loboratornay.ViewModel;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 
-namespace WpfAppName.View
+namespace loboratornay.View
 {
     /// <summary>
     /// Логика взаимодействия для WindowRole.xaml
     /// </summary>
     public partial class WindowRole : Window
     {
-
+        RoleViewModel vmRole = new RoleViewModel();
         public WindowRole()
         {
             InitializeComponent();
@@ -18,13 +29,9 @@ namespace WpfAppName.View
             lvRole.ItemsSource = vmRole.ListRole;
         }
 
-        public object vmRole { get; private set; }
-
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            RoleViewModel vmRole = new RoleViewModel();
-            lvRole.ItemsSource = vmRole.ListRole;
-            WindowNewRole wnRole = new WindowNewRole
+            WindowsNewRole wnRole = new WindowsNewRole
             {
                 Title = "Новая должность",
                 Owner = this
@@ -41,11 +48,10 @@ namespace WpfAppName.View
                 vmRole.ListRole.Add(role);
             }
         }
+
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-            RoleViewModel vmRole = new RoleViewModel();
-            lvRole.ItemsSource = vmRole.ListRole;
-            WindowNewRole wnRole = new WindowNewRole
+            WindowsNewRole wnRole = new WindowsNewRole
             {
                 Title = "Редактирование должности",
                 Owner = this
@@ -66,13 +72,12 @@ namespace WpfAppName.View
             else
             {
                 MessageBox.Show("Необходимо выбрать должность для редактированния",
-                "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            RoleViewModel vmRole = new RoleViewModel();
-            lvRole.ItemsSource = vmRole.ListRole;
             Role role = (Role)lvRole.SelectedItem;
             if (role != null)
             {
@@ -87,10 +92,8 @@ namespace WpfAppName.View
             else
             {
                 MessageBox.Show("Необходимо выбрать должность для удаления",
-                "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
-
-
     }
 }

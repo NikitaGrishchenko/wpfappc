@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace loboratornay.Helper
 {
-    class FindRole
+    class FindPerson
     {
         int id;
-        public FindRole(int id)
+        public FindPerson(int id)
         {
             this.id = id;
         }
-        public bool RolePredicate(Role role)
+        public bool PersonPredicate(Person role)
         {
             return role.Id == id;
         }

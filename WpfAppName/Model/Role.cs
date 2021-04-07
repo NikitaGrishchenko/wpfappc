@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace WpfAppName.Model
+namespace loboratornay.Model
 {
     public class Role
     {
@@ -14,10 +16,10 @@ namespace WpfAppName.Model
             this.Id = id;
             this.NameRole = nameRole;
         }
+
         public Role ShallowCopy()
         {
             return (Role)this.MemberwiseClone();
         }
     }
-
 }
